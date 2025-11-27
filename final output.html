@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Name - Developer</title>
+  <link rel="stylesheet" href="Final.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="particles" id="particles"></div>
+    <div class="hero-content container">
+      <h1>Remar Florindel C. Dagpong</h1>
+      <p>Bukidnon State University BSIT Student</p>
+      <a href="#contact" class="btn">Get In Touch</a>
+    </div>
+  </section>
+
+  <!-- Navigation -->
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">Remar Florindel C. Dagpong</div>
+        <div class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <!-- REPLACE WITH YOUR PHOTO -->
+        <img src="your-photo.jpg" alt="Remar Dagpong" class="my-photo">
+        <!-- Or use online link: https://yourphoto.com/photo.jpg -->
+
+        <div>
+          <h2>About Me</h2>
+          <p>From Bugcaon, Lantapan, Bukidnon </p>
+          <p>Passionate about clean code, performance, and pixel-perfect design.</p>
+          <p class="skills">React • Next.js • TypeScript • Node.js • Tailwind • Three.js</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <img src="https://via.placeholder.com/600x400/111/eee?text=E-Commerce" alt="E-Commerce">
+          <h3>E-Commerce Platform</h3>
+          <p>Full-stack store with React, Node.js & Stripe</p>
+        </div>
+        <div class="project-card">
+          <img src="https://via.placeholder.com/600x400/111/eee?text=AI+Dashboard" alt="AI Dashboard">
+          <h3>AI Analytics Dashboard</h3>
+          <p>Real-time data visualization with Next.js 14</p>
+        </div>
+        <div class="project-card">
+          <img src="https://via.placeholder.com/600x400/111/eee?text=3D+Site" alt="3D Portfolio">
+          <h3>3D Interactive Site</h3>
+          <p>WebGL portfolio using Three.js & GSAP</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <h2>Let's Work Together</h2>
+      <p>Available for freelance & full-time opportunities</p>
+      <p class="email">hello@yourname.com</p>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Your Name • Built with pure HTML & CSS</p>
+    </div>
+  </footer>
+
+  <script>
+    // Hamburger menu
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        mobileMenu.classList.remove('active');
+      });
+    });
+
+    // Floating particles
+    const pContainer = document.getElementById('particles');
+    for(let i = 0; i < 40; i++) {
+      const p = document.createElement('div');
+      p.classList.add('particle');
+      p.style.width = p.style.height = Math.random() * 6 + 3 + 'px';
+      p.style.left = Math.random() * 100 + '%';
+      p.style.animationDelay = Math.random() * 25 + 's';
+      p.style.animationDuration = Math.random() * 20 + 20 + 's';
+      pContainer.appendChild(p);
+    }
+  </script>
+</body>
+</html>
