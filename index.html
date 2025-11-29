@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Remar Dagpong - Developer</title>
+  <link rel="stylesheet" href="Final.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="particles" id="particles"></div>
+    <div class="hero-content container">
+      <h1>Remar Florindel C. Dagpong</h1>
+      <p>Bukidnon State University BSIT Student</p>
+      <a href="#contact" class="btn">Get In Touch</a>
+    </div>
+  </section>
+
+  <!-- Navigation -->
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">Remar Florindel C. Dagpong</div>
+        <div class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+
+        <img src="C:\\Users\\REMAR\\FOR CODING\\Final Output for Fundamentals\\428613876_3550119728572930_8485812661480358239_n_imgupscaler.ai_General_4K.jpg" alt="Remar Dagpong" class="my-photo">
+  
+
+        <div>
+          <h2>About Me</h2>
+          <p>Based in Bugcaon, Lantapan, Bukidnon</p>
+          <p>An enthusiastic BSIT student deeply fascinated by the entire web development process. I'm focused on mastering the tools to build fast, beautiful, 
+            and user-friendly applications. Always building, always learning.</p>
+          <p class="Skills"> Responsive Design, Problem Solving, Debugging
+Currently Exploring: React.js Fundamentals</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <div class="container">
+      <h2>What skills I'm Building</h2>
+      <div class="projects-grid">
+       <div class="project-card">
+  <img src="C:\\Users\\REMAR\\FOR CODING\\Final Output for Fundamentals\\Screenshot 2025-11-29 115211.png" alt="Online Store">
+  <h3>Online Store Frontend</h3>
+  <p>Product catalog with interactive shopping cart using HTML, CSS & JavaScript</p>
+</div>
+<div class="project-card">
+  <img src="C:\\Users\\REMAR\\FOR CODING\\Final Output for Fundamentals\\Screenshot 2025-11-29 120716.png" alt="Grade Tracker">
+  <h3>Student Grade Tracker</h3>
+  <p>Data visualization with Chart.js using HTML, CSS & JavaScript</p>
+</div>
+<div class="project-card">
+  <img src="C:\\Users\\REMAR\\FOR CODING\\Final Output for Fundamentals\\Screenshot 2025-11-29 121419.png" alt="Portfolio Website">
+  <h3>Interactive Portfolio Website</h3>
+  <p>Smooth animations and responsive design with HTML, CSS & JavaScript</p>
+</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <h2>Let's Code And Learn Together</h2>
+      <p>Available for learning opportunities</p>
+      <p class="email">https://github.com/super-remar21</p>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Remar Florindel C. Dagpong</p>
+    </div>
+  </footer>
+
+  <script>
+    // Hamburger menu
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        mobileMenu.classList.remove('active');
+      });
+    });
+
+    // Floating particles
+    const pContainer = document.getElementById('particles');
+    for(let i = 0; i < 40; i++) {
+      const p = document.createElement('div');
+      p.classList.add('particle');
+      p.style.width = p.style.height = Math.random() * 6 + 3 + 'px';
+      p.style.left = Math.random() * 100 + '%';
+      p.style.animationDelay = Math.random() * 25 + 's';
+      p.style.animationDuration = Math.random() * 20 + 20 + 's';
+      pContainer.appendChild(p);
+    }
+  </script>
+</body>
+</html>
